@@ -72,11 +72,7 @@ if st.button("Fetch Light Curve"):
                 'Time': light_curve.time.value,
                 'Flux': light_curve.flux.value,
                 'Flux Error': light_curve.flux_err.value
-            })
-            
-            st.subheader("First 20 rows of the dataset:")
-            st.dataframe(df.head(20))
-            
+            })           
             # Create a download button for the CSV file
             csv = df.to_csv(index=False)
             st.download_button(
